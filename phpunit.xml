@@ -31,7 +31,7 @@
         <server name="SESSION_DRIVER" value="array"/>
 
 <!--        Does not work, should move tests to memory via sqlite but fails-->
-<!--        <server name="DB_CONNECTION" value="sqlite"/>-->
-<!--        <server name="DB_DATABASE" value=":memory:"/>-->
+        <server name="DB_CONNECTION" value="sqlite"/>
+        <server name="DB_DATABASE" value=":memory:"/>
     </php>
 </phpunit>

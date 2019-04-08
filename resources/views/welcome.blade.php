@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Title</title>
+        <title>Build A Laravel App With TDD</title>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <style type="text/css">body {padding-top: 40px !important}</style>
     </head>
     <body>
         <div id="app" class="container">
-            <a :href="laracast_url"  target="_blank">Episode  1</a>
+            <a :href="laracast_url"  target="_blank">Series List</a>
             <br><br>
             <example></example>
         </div>

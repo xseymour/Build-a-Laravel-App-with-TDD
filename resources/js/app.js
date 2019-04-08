@@ -11,6 +11,6 @@ window.Vue = require('vue');
 const app = new Vue({
     el: '#app',
     data: {
-    	laracast_url: 'https://laracasts.com/series/build-a-laravel-app-with-tdd/episodes/1',
+    	laracast_url: 'https://laracasts.com/series/build-a-laravel-app-with-tdd',
     }
 });
