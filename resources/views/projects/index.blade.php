@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Birdboard</title>
 </head>
 <body>
-	@foreach($projects as $project)
-		<li>{{$project->title}}</li>
-	@endforeach
+<ul>
+	@forelse($projects as $project)
+		<li><a href="{{$project->path()}}">{{$project->title}}</a></li>
+	@empty
+		No Projects Yet.
+	@endforelse
+</ul>
 </body>
 </html>

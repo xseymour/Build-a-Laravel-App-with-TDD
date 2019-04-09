@@ -14,13 +14,25 @@ class ProjectsController extends Controller
     }
 
     /**
+     * @param Project $project (Route Model Binding)
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show(Project $project)
+    {
+        return view('projects.show', compact('project'));
+    }
+
+    /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store()
     {
         //validate
-        $attributes = $this->validate(request(), ['title' => 'required', 'description' => 'required']);
+        $attributes = $this->validate(request(), [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
         //persist
         Project::create( $attributes);
         //redirect
