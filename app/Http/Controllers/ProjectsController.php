@@ -31,10 +31,10 @@ class ProjectsController extends Controller
         //validate
         $attributes = $this->validate(request(), [
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
         //persist
-        Project::create( $attributes);
+        auth()->user()->projects()->create($attributes);
         //redirect
         return redirect('/projects');
     }
