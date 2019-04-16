@@ -28,6 +28,11 @@ class ProjectsController extends Controller
         return view('projects.show', compact('project'));
     }
 
+    public function create()
+    {
+        return view('projects.create');
+    }
+
     /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Illuminate\Validation\ValidationException
