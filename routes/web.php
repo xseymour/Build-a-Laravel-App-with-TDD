@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/home', 'HomeController@index')->name('home');
+    //Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/', 'ProjectsController@index');
     Route::get('/projects', 'ProjectsController@index');
     Route::get('/projects/create', 'ProjectsController@create');
     Route::get('/projects/{project}', 'ProjectsController@show');
